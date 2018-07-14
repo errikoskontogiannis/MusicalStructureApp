@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".SearchActivity" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/song_list_navbar_padding"
+        android:background="@color/colorPrimaryDark" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:id="@+id/library"
+            android:src="@drawable/ic_library_music" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:id="@+id/browse"
+            android:src="@drawable/ic_music_note" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:id="@+id/search"
+            android:src="@drawable/ic_search" />
+
+    </LinearLayout>
+
+    <SearchView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/activity_search_search_view_margin"
+        android:background="@drawable/rounded_corners"
+        android:queryHint="@string/search_song"
+        android:inputType="text" >
+    </SearchView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/song_list_sub_category_padding"
+        android:text="@string/recommended"
+        android:textStyle="bold"
+        android:textSize="20sp" />
+
+    <ListView
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:id="@+id/song_list"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/song_list_now_playing_marginTop"
+        android:layout_marginRight="@dimen/song_list_now_playing_marginRight"
+        android:layout_marginLeft="@dimen/song_list_now_playing_marginLeft"
+        android:layout_marginBottom="@dimen/song_list_now_playing_marginBottom"
+        android:padding="@dimen/song_list_now_playing_padding"
+        android:orientation="horizontal"
+        android:background="@drawable/rounded_corners" >
+
+        <ImageView
+            android:layout_width="@dimen/song_list_now_playing_song_image_width"
+            android:layout_height="@dimen/song_list_now_playing_song_image_height"
+            android:layout_weight="1"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/default_song_image" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_gravity="center_vertical"
+            android:text="@string/name_of_the_current_song"
+            android:textStyle="bold"
+            android:textAlignment="center" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/ic_play_arrow" />
+
+    </LinearLayout>
+
+</LinearLayout>
